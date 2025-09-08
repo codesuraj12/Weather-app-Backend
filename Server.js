@@ -7,7 +7,7 @@ const port = 3000
 
 dotenv.config()
 app.use(cors({
-     origin: ["http://localhost:5173", "https://myapp.com"]
+     origin: ["http://localhost:5173", "https://weather-app-frontend-rho-amber.vercel.app/"]
 }))
 
 app.get('/', (req, res) => {
