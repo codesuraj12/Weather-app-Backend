@@ -1,13 +1,14 @@
 const express = require('express')
 const dotenv = require('dotenv')
    const cors = require('cors');
-const app = express()
-const port = 3000
+   
+   dotenv.config()
+   const app = express()
+const port = process.env.PORT || 3000
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000'
 
-
-dotenv.config()
 app.use(cors({
-     origin: ["http://localhost:5173", "https://weather-app-frontend-rho-amber.vercel.app/"]
+     origin: FRONTEND_URL
 }))
 
 app.get('/', (req, res) => {
